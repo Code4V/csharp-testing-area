@@ -1,68 +1,14 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using System;
 
-public class Drawing
+
+
+namespace HelloWorld
 {
-    public virtual double Area()
+    class Program
     {
-        return 0;   
-    }
-}
-
-public class Circle : Drawing
-{
-    public double Radius { get; set; }
-    public Circle ()
+        static void Main(string[] args)
         {
-        Radius = 5;
+            Console.WriteLine("Supercalifragilisticexpialidocious");
         }
-
-    public override double Area()
-    {
-        return (3.14) * Math.Pow(Radius, 2);
-    }
-}
-
-public class Square : Drawing
-{
-    public double Length { get; set; }
-    public Square()
-    {
-        Length = 6;
-    }
-    public override double Area()
-    {
-        return Math.Pow(Length, 2);
-    }
-}
-
-public class Rectangle : Drawing
-{
-    public double  Height { get; set; }
-    public double Width { get; set; }
-
-    public Rectangle()
-    {
-        Height = 5.3;
-        Width = 2.4;
-    }
-
-    public override double Area()
-    {
-        return Height*Width;
-    }
-}
-
-class Testing
-{
-    static void Main(string[] args)
-    {
-        Drawing circle = new Circle();
-        Console.WriteLine("Area :" + circle.Area());
-
-        Drawing square = new Square();
-        Console.WriteLine("Area :" + square.Area());
-
-        Drawing rectangle = new Rectangle();
-        Console.WriteLine("Area :" + rectangle.Area());
     }
 }
